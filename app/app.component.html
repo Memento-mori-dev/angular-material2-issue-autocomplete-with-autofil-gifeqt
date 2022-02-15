@@ -1,0 +1,77 @@
+<mat-toolbar color="primary"> mat-autocomplete with autofill </mat-toolbar>
+<div class="basic-container">
+  <form class="address-form" [formGroup]="addressForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="name"
+        formControlName="name"
+        placeholder="Name"
+      />
+      <mat-error> Required </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="addressLine1"
+        formControlName="addressLine1"
+        placeholder="Address line 1"
+        [matAutocomplete]="auto"
+      />
+      <mat-error> Required </mat-error>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option> I'm an option </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="addressLine2"
+        formControlName="addressLine2"
+        placeholder="Address line 2"
+      />
+      <mat-error> Required </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="city"
+        formControlName="city"
+        placeholder="City"
+      />
+      <mat-error> Required </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="state"
+        formControlName="state"
+        placeholder="State"
+      />
+      <mat-error> Required </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="postalCode"
+        formControlName="postalCode"
+        placeholder="Zip"
+      />
+      <mat-error> Required </mat-error>
+    </mat-form-field>
+  </form>
+  <!-- <span class="version-info">Current build: {{version.full}}</span> -->
+</div>
+
+<!--
+Copyright Google LLC All Rights Reserved.
+
+Use of this source code is governed by an MIT-style license that can be
+found in the LICENSE file at https://angular.io/license
+-->
